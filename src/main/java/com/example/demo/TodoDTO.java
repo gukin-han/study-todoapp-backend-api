@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.domain.TodoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

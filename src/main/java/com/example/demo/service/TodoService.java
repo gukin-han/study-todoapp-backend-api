@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.TodoEntity;
+import com.example.demo.domain.TodoEntity;
 import com.example.demo.persistance.TodoRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +25,14 @@ public class TodoService {
 
         return repository.findByUserId(entity.getUserId());
     }
+
+    public List<TodoEntity> retrieve(final String userId) {
+        List<TodoEntity> todoEntities = repository.findByUserId(userId);
+        log.info("{} entities retrieved", todoEntities.size());
+        return todoEntities;
+    }
+
+
 
     // 리팩토링한 메서드
     private void validate(final TodoEntity entity) {

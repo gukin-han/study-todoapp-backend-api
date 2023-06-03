@@ -1,6 +1,6 @@
 package com.example.demo.persistance;
 
-import com.example.demo.TodoEntity;
+import com.example.demo.domain.TodoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

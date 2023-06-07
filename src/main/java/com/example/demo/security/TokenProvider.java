@@ -39,9 +39,9 @@ public class TokenProvider {
         return Jwts.builder()
                 // header 에 들어갈 내용 및 서명을 하기 위한 SECRET_KEY
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
-                // payload에 들어갈 내용
+                // payload 에 들어갈 내용
                 .setSubject(userEntity.getId()) // sub
-                .setIssuer("deom app") // uss
+                .setIssuer("demo app") // uss
                 .setIssuedAt(new Date()) // iat
                 .setExpiration(expiryDate) // exp
                 .compact();

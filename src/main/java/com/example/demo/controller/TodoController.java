@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.ResponseDTO;
-import com.example.demo.TodoDTO;
+import com.example.demo.dto.ResponseDTO;
+import com.example.demo.dto.TodoDTO;
 import com.example.demo.domain.TodoEntity;
 import com.example.demo.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;

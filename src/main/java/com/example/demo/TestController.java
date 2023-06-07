@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.dto.ResponseDTO;
+import com.example.demo.dto.TestRequestBodyDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

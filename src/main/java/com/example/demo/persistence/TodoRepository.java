@@ -1,4 +1,4 @@
-package com.example.demo.persistance;
+package com.example.demo.persistence;
 
 import com.example.demo.domain.TodoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

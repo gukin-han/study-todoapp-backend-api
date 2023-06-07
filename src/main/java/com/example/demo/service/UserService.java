@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.UserEntity;
-import com.example.demo.persistance.UserRepository;
+import com.example.demo.persistence.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

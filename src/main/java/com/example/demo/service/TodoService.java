@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.TodoEntity;
-import com.example.demo.persistance.TodoRepository;
+import com.example.demo.persistence.TodoRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

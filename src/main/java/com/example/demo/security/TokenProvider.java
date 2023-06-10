@@ -6,6 +6,7 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -44,6 +45,20 @@ public class TokenProvider {
                 .setIssuer("demo app") // uss
                 .setIssuedAt(new Date()) // iat
                 .setExpiration(expiryDate) // exp
+                .compact();
+    }
+
+    public String create(final Authentication authentication) {
+        ApplicationOAuth2User userPrincipal = (ApplicationOAuth2User) authentication.getPrincipal();
+        Date expiryDate = Date.from(
+                Instant.now()
+                        .plus(1, ChronoUnit.DAYS));
+
+        return Jwts.builder()
+                .setSubject(userPrincipal.getName())
+                .setIssuedAt(new Date())
+                .setExpiration(expiryDate)
+                .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
 
